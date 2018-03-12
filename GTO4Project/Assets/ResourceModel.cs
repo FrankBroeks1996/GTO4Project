@@ -15,7 +15,10 @@ public class ResourceModel : MonoBehaviour {
     {
         get { return currentOwned; }
         set {
-            currentOwned = value;
+            if (value >= 0)
+            {
+                currentOwned = value;
+            }
 
             if(handler != null)
             {
@@ -29,8 +32,6 @@ public class ResourceModel : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         currentOwned = StartAmount;
-
-
 	}
 
     

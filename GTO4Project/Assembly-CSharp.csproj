@@ -51,9 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Grid.cs" />
      <Compile Include="Assets\ResourceController.cs" />
      <Compile Include="Assets\ResourceModel.cs" />
      <Compile Include="Assets\ResourceView.cs" />
+     <Compile Include="Assets\Tile.cs" />
+     <Compile Include="Assets\UnitFactory.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

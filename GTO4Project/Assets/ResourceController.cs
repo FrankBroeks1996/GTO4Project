@@ -7,17 +7,15 @@ using UnityEngine.Experimental.UIElements;
 public class ResourceController : MonoBehaviour {
 
     public Button Button;
-    public ResourceModel Resource;
 
-    public void RemoveResource(ResourceModel resourceModel)
+    public void RemoveResource(ResourceModel resourceModel, int subtractValue)
     {
-        //Resource.CurrentOwned--;
+        resourceModel.CurrentOwned -= subtractValue;
     }
 
-    public void AddResource(ResourceModel resourceModel)
+    public void AddResource(ResourceModel resourceModel, int advanceValue)
     {
-        //Resource.CurrentOwned++;
-        resourceModel.CurrentOwned++;
+        resourceModel.CurrentOwned += advanceValue;
     }
 
 }
