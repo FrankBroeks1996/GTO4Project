@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class UnitFactory : MonoBehaviour {
 
+    public Player player;
     public GameObject unit;
     public Grid grid;
 	public List<ResourceCost> Resources;
     public ResourceController resourceController;
 
-	public void InstantiateUnit()
+	public GameObject InstantiateUnit()
     {
         if (AreResourcesSufficient())
         {
             Tile tile = grid.GetFirstEmptyTile();
-            Instantiate(unit, new Vector3(tile.x, 2, tile.y), Quaternion.identity);
             tile.Occupied = true;
+            return Instantiate(unit, new Vector3(tile.x, 2, tile.y), Quaternion.identity); 
         }
+        return null;
     }
 
     [System.Serializable]
@@ -43,7 +45,7 @@ public class UnitFactory : MonoBehaviour {
     {
         foreach (ResourceCost resource in Resources)
         {
-            resourceController.RemoveResource(resource.resource, resource.cost);
+            resourceController.RemoveResource(resource.resource);
         }
     }
 }

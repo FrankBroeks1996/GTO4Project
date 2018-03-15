@@ -51,12 +51,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Grid.cs" />
-     <Compile Include="Assets\ResourceController.cs" />
-     <Compile Include="Assets\ResourceModel.cs" />
-     <Compile Include="Assets\ResourceView.cs" />
-     <Compile Include="Assets\Tile.cs" />
-     <Compile Include="Assets\UnitFactory.cs" />
+     <Compile Include="Assets\Scripts\Grid.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\PlayerManager.cs" />
+     <Compile Include="Assets\Scripts\ResourceController.cs" />
+     <Compile Include="Assets\Scripts\ResourceModel.cs" />
+     <Compile Include="Assets\Scripts\ResourceView.cs" />
+     <Compile Include="Assets\Scripts\Tile.cs" />
+     <Compile Include="Assets\Scripts\Unit.cs" />
+     <Compile Include="Assets\Scripts\UnitFactory.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
