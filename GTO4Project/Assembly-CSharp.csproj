@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\ResourceController.cs" />
      <Compile Include="Assets\Scripts\ResourceModel.cs" />
      <Compile Include="Assets\Scripts\ResourceView.cs" />
+     <Compile Include="Assets\Scripts\SelectionHandler.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
      <Compile Include="Assets\Scripts\Unit.cs" />
      <Compile Include="Assets\Scripts\UnitFactory.cs" />

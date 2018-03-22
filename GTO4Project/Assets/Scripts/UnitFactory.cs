@@ -15,8 +15,11 @@ public class UnitFactory : MonoBehaviour {
         if (AreResourcesSufficient())
         {
             Tile tile = grid.GetFirstEmptyTile();
-            tile.Occupied = true;
-            return Instantiate(unit, new Vector3(tile.x, 2, tile.y), Quaternion.identity); 
+            GameObject newUnit = Instantiate(unit, new Vector3(tile.x, 2, tile.y), Quaternion.identity);
+            newUnit.transform.parent = tile.transform;
+            newUnit.GetComponent<Unit>().tile = tile;
+            tile.UnitOnTile = newUnit.GetComponent<Unit>();
+            return newUnit;
         }
         return null;
     }
